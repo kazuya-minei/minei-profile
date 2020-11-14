@@ -9,7 +9,8 @@ body{
       "...... main3  main3  ......" auto
       "...... footer footer ......" 300px
       /auto 40% 60% auto;
-  overflow-x: hidden;    
+  overflow-x: hidden;   
+  table-layout: fixed;
 }
 
 
@@ -189,6 +190,10 @@ footer{
   .introduction p {
     width: 300px;
   } 
+
+  .main2:before{
+    margin-left: -2%;
+  }
 }
 
 @media screen and (max-width:600px) {
@@ -199,12 +204,12 @@ footer{
 
 .main3:before{
   content: '';
-  width: 103%;
+  width: 107%;
   height: 500px;
   background-color: rgba(214, 214, 214, 0.3);
   position: absolute;
   top: -90%;
-  left: -1%;
+  left: -5%;
   z-index: -1;
   transform-origin: center left;
   transform: rotate(-4deg);
@@ -212,12 +217,12 @@ footer{
 
 .main2:before{
   content: '';
-  width: 105%;
+  width: 110%;
   height: 500px;
   background-color: rgba(214, 214, 214, 0.3);
   position: absolute;
-  margin-left: -42%;
-  margin-top: 30%;
+  top: 72%;
+  right: -6%;
   z-index: -1;
   transform-origin: center left;
   transform: rotate(4deg);
@@ -225,12 +230,12 @@ footer{
 
 footer:before{
   content: '';
-  width: 106%;
+  width: 110%;
   height: 500px;
   background-color: rgba(214, 214, 214, 0.3);
   position: absolute;
-  margin-left: -2%;
-  margin-top: 0%;
+  margin-left: -5%;
+  margin-top: -13%;
   z-index: -1;
   transform-origin: center left;
   transform: rotate(-4deg);
