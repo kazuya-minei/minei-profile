@@ -204,7 +204,7 @@ footer{
   }
 }
 
-.main3:before{
+/*.main3:before{
   content: '';
   width: 107%;
   height: 500px;
@@ -241,4 +241,17 @@ footer:before{
   z-index: -1;
   transform-origin: center left;
   transform: rotate(-4deg);
+}*/
+
+footer::before{
+  content: '';
+display: block;
+position: absolute;
+top: 30%;
+right: 0;
+bottom: 30%;
+left: 0;
+background-color: #816541;
+transform: skewY(30deg);
+z-index: -1;
 }
