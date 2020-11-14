@@ -173,6 +173,7 @@ footer{
        "main3"  auto
        "footer" 300px
        /minmax(300px,1fr);
+    table-layout: fixed;
   }
 
   .main1{
