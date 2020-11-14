@@ -1,0 +1,241 @@
+body{
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template: 
+      "...... header header ......" 150px
+      "...... main1  main2  ......" auto
+      "...... .....  main2  ......" auto
+      "...... main3  main3  ......" auto
+      "...... footer footer ......" 300px
+      /auto 40% 60% auto;
+  overflow-x: hidden;    
+}
+
+
+
+header{
+  grid-area: header;
+}
+
+header h1{
+  text-align: center;
+  font-size: 50px;
+  font-family: monospace;
+}
+
+.header-logo{
+  display: block;
+  height: 75px;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+
+.main1{
+  grid-area: main1;
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
+
+.profile-img img{
+  display: block;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%,-50%);
+}
+
+.main2{
+  grid-area: main2;
+  padding-bottom: 0px;
+}
+
+.name{
+  margin-top: 300px;
+  text-align: center;
+}
+
+.name h2{
+  margin-bottom: 0px;
+}
+
+.name h3{
+  font-size: 13px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.profile li{
+  float: left;
+  list-style: none;
+  width: 40%;
+  height: 30px;
+  text-align: center;
+  border-left:5px solid black ;
+  border-bottom:1px solid black ;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: arial narrow;
+  line-height: 30px;
+}
+
+span{
+  float: left;
+  font-size: 12px;
+  padding-left: 2px;
+}
+
+.left{
+  margin-right: 10%;
+}
+
+.main3{
+  grid-area: main3;
+  position: relative;
+  text-align: center;
+}
+
+.main3 h2{
+  margin-top: 30px;
+}
+
+.voice{
+  display: inline-block;
+}
+
+.voice p{
+  margin: 3px 0 3px 0;
+}
+
+.introduction p{
+  width: 500px;
+  margin: auto;
+}
+
+.icon{
+    float: left;
+    width: 25%;
+}
+
+.icon :hover{
+  border-radius: 0%;
+  transition: all 0.2s;
+}
+
+.btn{
+  width: 50%;
+  border-radius: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.job-list{
+  border-bottom: 2px dashed gray;
+  width: 50%;
+  margin: auto;
+}
+
+.job-list li{
+  width: fit-content;
+  margin: 0 auto;
+  list-style: none;
+  margin-left: 0px;
+}
+
+.job-list p{
+  margin-top: 0px;
+}
+
+footer{
+  grid-area: footer;
+}
+
+.footer-logo{
+  height: 20%;
+  display: block;
+  margin: 0 auto;
+}
+
+ .other{
+   padding-top: 15px;
+ }
+
+@media screen and (max-width:770px){
+  body{
+    grid-template:
+       "header" 1fr
+       "main1"  400px
+       "main2"  auto
+       "main3"  auto
+       "footer" 300px
+       /minmax(300px,1fr)
+  }
+
+  .main1{
+    width: 0px;
+  }
+
+  .main2{
+    padding-bottom: 0px;
+  }
+
+  .name{
+    margin-top: 0px;
+  }
+
+  .introduction p {
+    width: 300px;
+  } 
+}
+
+@media screen and (max-width:600px) {
+  .header-logo{
+    height: 50px;
+  }
+}
+
+@media screen and (max-width:525px){
+  li{
+    font-size:6px;
+  }
+}
+
+.main3:before{
+  content: '';
+  width: 200%;
+  height: 500px;
+  background-color: rgba(214, 214, 214, 0.3);
+  position: absolute;
+  top: -80%;
+  left: -70%;
+  z-index: -1;
+  transform-origin: center left;
+  transform: rotate(-4deg);
+}
+
+.main2:before{
+  content: '';
+  width: 200%;
+  height: 500px;
+  background-color: rgba(214, 214, 214, 0.3);
+  position: absolute;
+  margin-left: -70%;
+  margin-top: 40%;
+  z-index: -1;
+  transform-origin: center left;
+  transform: rotate(4deg);
+}
+
+footer:before{
+  content: '';
+  width: 200%;
+  height: 500px;
+  background-color: rgba(214, 214, 214, 0.3);
+  position: absolute;
+  margin-left: -70%;
+  margin-top: -10%;
+  z-index: -1;
+  transform-origin: center left;
+  transform: rotate(-4deg);
+}
