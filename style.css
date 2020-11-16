@@ -247,11 +247,37 @@ footer::before{
   content: '';
 display: block;
 position: absolute;
-top: 30%;
+top: -18%;
 right: 0;
-bottom: 30%;
+bottom: 70%;
 left: 0;
-background-color: #816541;
-transform: skewY(30deg);
+background-color: #a5a5a54f;
+transform: skewY(13deg);
 z-index: -1;
+}
+
+.main3::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 84%;
+  right: 0;
+  bottom: -30%;
+  left: 0;
+  background-color:  #a5a5a54f;
+  transform: skewY(13deg);
+  z-index: -1;
+}
+
+header::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 84%;
+  right: 0;
+  bottom: -45%;
+  left: 0;
+  background-color: #a5a5a54f;
+  transform: skewY(-13deg);
+  z-index: -1;
 }
