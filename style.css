@@ -275,7 +275,7 @@ header::before{
   position: absolute;
   top: 84%;
   right: 0;
-  bottom: -45%;
+  bottom: -35%;
   left: 0;
   background-color: #a5a5a54f;
   transform: skewY(-13deg);
